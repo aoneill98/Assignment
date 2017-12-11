@@ -4,7 +4,7 @@ class Fuel {
   float y1 = height - height/5.2;
   float xlength = width/20;
   float ylength = height/6;
-  int count = 0;
+  int count;
   
   Fuel(int count) {
     this.count = count;
@@ -50,5 +50,9 @@ class Fuel {
       fill(0);
       rect(x1, y1, xlength, y2);
     }
+  }
+  
+  void count() {
+    count = 0;
   }
 }

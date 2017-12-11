@@ -44,6 +44,7 @@ void keyReleased() {
     speedMeter.count();
     count = 0;
     FuelBar.FuelSetup();
+    FuelBar.count();
     FuelBar.bar();
     break;
   }
