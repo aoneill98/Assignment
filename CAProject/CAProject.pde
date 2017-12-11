@@ -25,16 +25,27 @@ void draw() {
     speedMeter.bar();
 }
 
+void abc() {
+  FuelBar.sets();
+    speedMeter.count2();
+    speedMeter.speedSetup();
+    speedMeter.bar();
+    FuelBar.Fuelspeed();
+    FuelBar.bar();
+}
+
 void keyPressed() {
   switch(key)
   {
     case 'w':
+    FuelBar.sets1();
     speedMeter.count2();
     speedMeter.speedSetup();
     speedMeter.bar();
     FuelBar.Fuelspeed();
     FuelBar.bar();
     break;
+    
   }
 }
 
@@ -42,6 +53,8 @@ void keyReleased() {
   switch(key)
   {
     case 'w':
+    FuelBar.sets();
+    FuelBar.Fuelspeed();
     speedMeter.count();
     FuelBar.FuelSetup();
     FuelBar.count();

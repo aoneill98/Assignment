@@ -8,6 +8,10 @@ class Star {
     y = random(-height, height);
     z = random(width);
   }
+  
+    void speedChange() {
+      speed = 20;
+    }
     
     void update() {
       z = z - speed;
