@@ -11,8 +11,8 @@ void setup() {
   for (int i = 0; i < stars.length; i++) {
     stars[i] = new Star();
   }
-  speedMeter = new Speedo();
   FuelBar = new Fuel(count);
+  speedMeter = new Speedo();
 }
 
 Radar radar1;
@@ -29,9 +29,10 @@ void keyPressed() {
   switch(key)
   {
     case 'w':
-    speedMeter.speed();
+    speedMeter.count2();
+    speedMeter.speedSetup();
+    speedMeter.bar();
     FuelBar.Fuelspeed();
-    count = 1;
     FuelBar.bar();
     break;
   }
@@ -42,7 +43,6 @@ void keyReleased() {
   {
     case 'w':
     speedMeter.count();
-    count = 0;
     FuelBar.FuelSetup();
     FuelBar.count();
     FuelBar.bar();
