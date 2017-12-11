@@ -1,6 +1,8 @@
 Star[] stars = new Star[800];
 float speed;
 Speedo speedMeter;
+Fuel FuelBar;
+int count = 0;
 
 void setup() {
   size(960, 636);
@@ -10,12 +12,15 @@ void setup() {
     stars[i] = new Star();
   }
   speedMeter = new Speedo();
+  FuelBar = new Fuel(count);
 }
 
 Radar radar1;
 
 void draw() {
     radar();
+    FuelBar.FuelSetup();
+    FuelBar.bar();
     speedMeter.speedSetup();
     speedMeter.bar();
 }
@@ -25,6 +30,9 @@ void keyPressed() {
   {
     case 'w':
     speedMeter.speed();
+    FuelBar.Fuelspeed();
+    count = 1;
+    FuelBar.bar();
     break;
   }
 }
@@ -34,6 +42,7 @@ void keyReleased() {
   {
     case 'w':
     speedMeter.count();
+    count = 0;
     break;
   }
 }

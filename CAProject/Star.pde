@@ -28,4 +28,4 @@ class Star {
       float r = map(z, 0, width, 16, 0);
       ellipse(sx, sy, 4, 4);
     }
-}
+} 
