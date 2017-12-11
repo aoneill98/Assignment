@@ -43,6 +43,8 @@ void keyReleased() {
     case 'w':
     speedMeter.count();
     count = 0;
+    FuelBar.FuelSetup();
+    FuelBar.bar();
     break;
   }
 }

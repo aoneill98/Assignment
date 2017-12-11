@@ -36,7 +36,7 @@ class Fuel {
     }
     
     else {
-      y2 =y2 + 0.1;
+      y2 =y2 + 0.05;
     }
   }
   

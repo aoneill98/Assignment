@@ -15,7 +15,6 @@ class Speedo {
       stars[i].update();
       stars[i].show();
     } 
-    count = 1;
   }
   
   void speedSetup() {
