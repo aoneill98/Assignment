@@ -97,6 +97,9 @@ class Fuel {
     else {
       textSize(50);
       text("YOU ARE OUT OF FUEL!", 197, 310);
+      textSize(20);
+      fill(255, 0, 0);
+      text("Press spacebar to refuel", 367, 360);
     }
   }
   
@@ -113,5 +116,10 @@ class Fuel {
   
   void count2() {
     count = 3;
+  }
+  
+  void reFuel() {
+    move = 0;
+    y2 = 0;
   }
 }
