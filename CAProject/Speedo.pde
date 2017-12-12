@@ -59,6 +59,7 @@ class Speedo {
   }
   
   void count2() {
+    move = 0;
     count = 1;
   }
   

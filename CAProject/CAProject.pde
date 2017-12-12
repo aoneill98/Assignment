@@ -39,7 +39,6 @@ void keyPressed() {
   switch(key)
   {
     case 'w':
-    noise1.play();
     FuelBar.sets1();
     speedMeter.count2();
     speedMeter.speedSetup();
@@ -59,6 +58,7 @@ void keyPressed() {
     break;
     
     case 'd':
+    noise1.play();
     FuelBar.sets2();
     FuelBar.count2();
     speedMeter.count2();
@@ -81,14 +81,14 @@ void keyReleased() {
   switch(key)
   {
     case 'w':
-    noise1.close();
-    noise1 = minim.loadFile("ufo.wav");
     FuelBar.sets();
     FuelBar.release();
     speedMeter.move();
     break;
     
     case 'd':
+    noise1.close();
+    noise1 = minim.loadFile("ufo.wav");
     FuelBar.sets();
     FuelBar.release();
     speedMeter.move();
