@@ -6,6 +6,8 @@ class Speedo {
   float xlength = width/7.5;
   float ylength = height/16;
   int count;
+  float dialx = 223;
+  float dialy = 628;
   
   void speed() {
     speed = 100;
@@ -18,6 +20,14 @@ class Speedo {
   }
   
   void speedSetup() {
+    fill(15);
+    quad(55, 960, 200, 535, 727, 535, 940, 960);
+    fill(100);
+    ellipse(320, 650, 245, 220);
+    ellipse(600, 650, 245, 220);
+    stroke(255);
+    line(320, 636, dialx, dialy);
+    stroke(0, 255, 0);
     fill(0, 255, 0);
     textSize(14);
     text("SPEEDOMETER", 841, 79);

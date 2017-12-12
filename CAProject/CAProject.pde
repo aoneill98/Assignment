@@ -13,6 +13,7 @@ void setup() {
   }
   FuelBar = new Fuel(count);
   speedMeter = new Speedo();
+  stroke(255);
 }
 
 Radar radar1;
