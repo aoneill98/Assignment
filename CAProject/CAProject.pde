@@ -73,16 +73,19 @@ void keyReleased() {
     case 'w':
     FuelBar.sets();
     FuelBar.release();
+    speedMeter.move();
     break;
     
     case 'd':
     FuelBar.sets();
     FuelBar.release();
+    speedMeter.move();
     break;
     
     case 'a':
     FuelBar.sets();
     FuelBar.release();
+    speedMeter.move();
     break;
   }
 }

@@ -6,7 +6,7 @@ class Speedo {
   float xlength = width/7.5;
   float ylength = height/16;
   int count;
-  
+  int move = 0;
   
   void speed() {
     speed = 100;
@@ -33,7 +33,7 @@ class Speedo {
     rect(x1, y1, xlength, ylength);
     fill(255);
 
-    if (count == 1) {
+    if (count == 1 && move != 1) {
       x2 = x2 + 0.25;
       
       if (x2 > xlength) {
@@ -41,7 +41,7 @@ class Speedo {
       }
     }
     
-    if (count == 2) {
+    if (count == 2 && move != 1) {
       x2 = x2 - 0.5;
       
       if (x2 < 0) {
@@ -60,5 +60,9 @@ class Speedo {
   
   void count2() {
     count = 1;
+  }
+  
+  void move() {
+    move = 1;
   }
  }

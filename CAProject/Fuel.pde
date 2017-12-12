@@ -8,6 +8,7 @@ class Fuel {
   int move = 0;
   int release;
   float dialx = 215;
+  float dialx2 = 500;
   float dialy = 628;
   Fuel(int count) {
     this.count = count;
@@ -44,16 +45,19 @@ class Fuel {
   
   void sets() {
     speed = 40;
+    release = 1;
     count = 1;
   }
   
   void sets1() {
     speed = 80;
+    release = 1;
     count = 2;
   }
   
   void sets2() {
     speed = 200;
+    release = 1;
     count = 3;
   }
   
@@ -66,13 +70,14 @@ class Fuel {
     text("FUEL GAUGE", 13, 500);
     stroke(255);
     line(320, 636, dialx, dialy);
+    line(580, 636, dialx2, dialy);
     stroke(0, 255, 0);
     
     if (move != 1) { 
       fill(255);
       rect(x1, y1, xlength, ylength, 0, 0, 40, 40);
       
-      if (count == 3) {
+      if (count == 3 && release != 0) {
         y2 = y2 + 0.3;
         
         if (y2 > ylength) {
@@ -82,6 +87,7 @@ class Fuel {
         
         if (dialx < 380) {
             dialx = dialx + 1;
+            dialx2 = dialx2 + 1;
           }
           
           if (dialy <= 550) {
@@ -93,7 +99,7 @@ class Fuel {
           }
       }
       
-      if (count == 2) {
+      if (count == 2 && release != 0) {
         y2 = y2 + 0.15;
         
         if (y2 > ylength) {
@@ -103,6 +109,7 @@ class Fuel {
         
         if (dialx < 380) {
             dialx = dialx + 0.5;
+            dialx2 = dialx2 + 0.5;
           }
           
           if (dialy <= 550) {
@@ -114,7 +121,7 @@ class Fuel {
           }
       }
       
-      if (count == 1) {
+      if (count == 1 && release != 0) {
         y2 = y2 + 0.075;
         
         if (y2 > ylength) {
@@ -124,6 +131,7 @@ class Fuel {
         
         if (dialx < 380) {
             dialx = dialx + 0.25;
+            dialx2 = dialx2 + 0.25;
           }
           
           if (dialy <= 550) {
@@ -148,6 +156,7 @@ class Fuel {
   
   void release() {
     dialx = 215;
+    dialx2 = 500;
     dialy = 628;
     release = 0;
   }
