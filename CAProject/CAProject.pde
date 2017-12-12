@@ -25,20 +25,11 @@ void draw() {
     speedMeter.bar();
 }
 
-void abc() {
-  FuelBar.sets();
-    speedMeter.count2();
-    speedMeter.speedSetup();
-    speedMeter.bar();
-    FuelBar.Fuelspeed();
-    FuelBar.bar();
-}
-
 void keyPressed() {
   switch(key)
   {
     case 'w':
-    FuelBar.sets1();
+    FuelBar.sets2();
     speedMeter.count2();
     speedMeter.speedSetup();
     speedMeter.bar();
@@ -46,6 +37,26 @@ void keyPressed() {
     FuelBar.bar();
     break;
     
+    case 'a':
+    FuelBar.sets();
+    FuelBar.count();
+    speedMeter.count2();
+    speedMeter.speedSetup();
+    speedMeter.bar();
+    FuelBar.Fuelspeed();
+    FuelBar.bar();
+    break;
+    
+    case 'd':
+    FuelBar.sets2();
+    FuelBar.count2();
+    speedMeter.count2();
+    speedMeter.speedSetup();
+    speedMeter.bar();
+    FuelBar.Fuelspeed();
+    FuelBar.FuelSetup();
+    FuelBar.bar();
+    break;
   }
 }
 
@@ -54,11 +65,10 @@ void keyReleased() {
   {
     case 'w':
     FuelBar.sets();
-    FuelBar.Fuelspeed();
-    speedMeter.count();
-    FuelBar.FuelSetup();
-    FuelBar.count();
-    FuelBar.bar();
+    break;
+    
+    case 'd':
+    FuelBar.sets();
     break;
   }
 }

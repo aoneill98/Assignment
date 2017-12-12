@@ -15,18 +15,19 @@ class Speedo {
       stars[i].update();
       stars[i].show();
     } 
-    
-    
   }
   
   void speedSetup() {
+    fill(0, 255, 0);
+    textSize(14);
+    text("SPEEDOMETER", 841, 79);
     stroke(0, 255, 0);
     fill(0);
     rect(x1, y1, xlength, ylength);
     fill(255);
     
     if (count == 1) {
-      x2 = x2 + 0.5;
+      x2 = x2 + 0.25;
       
       if (x2 > xlength) {
         x2 = xlength;
@@ -34,7 +35,7 @@ class Speedo {
     }
     
     if (count == 2) {
-      x2 = x2 - 1;
+      x2 = x2 - 0.5;
       
       if (x2 < 0) {
         x2 = 0;
