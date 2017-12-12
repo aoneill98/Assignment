@@ -23,6 +23,7 @@ void draw() {
     FuelBar.bar();
     speedMeter.speedSetup();
     speedMeter.bar();
+    reFuel();
 }
 
 void keyPressed() {
@@ -81,4 +82,8 @@ void radar() {
   ellipse(random(width), random(height), 2, 2);
   radar1.render();
   radar1.update();
+}
+
+void reFuel() {
+  ellipse(55, 55, 70, 70);
 }
