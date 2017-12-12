@@ -20,17 +20,17 @@ Radar radar1;
 
 void draw() {
     radar();
-    FuelBar.FuelSetup();
-    FuelBar.bar();
     speedMeter.speedSetup();
     speedMeter.bar();
+    FuelBar.FuelSetup();
+    FuelBar.bar();
 }
 
 void keyPressed() {
   switch(key)
   {
     case 'w':
-    FuelBar.sets2();
+    FuelBar.sets1();
     speedMeter.count2();
     speedMeter.speedSetup();
     speedMeter.bar();
@@ -72,10 +72,17 @@ void keyReleased() {
   {
     case 'w':
     FuelBar.sets();
+    FuelBar.release();
     break;
     
     case 'd':
     FuelBar.sets();
+    FuelBar.release();
+    break;
+    
+    case 'a':
+    FuelBar.sets();
+    FuelBar.release();
     break;
   }
 }

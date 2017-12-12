@@ -6,6 +6,9 @@ class Fuel {
   float ylength = height/6;
   int count;
   int move = 0;
+  int release;
+  float dialx = 215;
+  float dialy = 628;
   Fuel(int count) {
     this.count = count;
   }
@@ -61,6 +64,9 @@ class Fuel {
     fill(0, 255, 0);
     textSize(14);
     text("FUEL GAUGE", 13, 500);
+    stroke(255);
+    line(320, 636, dialx, dialy);
+    stroke(0, 255, 0);
     
     if (move != 1) { 
       fill(255);
@@ -73,6 +79,18 @@ class Fuel {
           y2 = ylength;
           move = 1;
         }
+        
+        if (dialx < 380) {
+            dialx = dialx + 1;
+          }
+          
+          if (dialy <= 550) {
+             dialy = dialy + 8;
+          }
+          
+          if (dialx >= 215 && dialy > 550) {
+            dialy = dialy - 1.2;
+          }
       }
       
       if (count == 2) {
@@ -82,16 +100,41 @@ class Fuel {
           y2 = ylength;
           move = 1;
         }
+        
+        if (dialx < 380) {
+            dialx = dialx + 0.5;
+          }
+          
+          if (dialy <= 550) {
+             dialy = dialy + 8;
+          }
+          
+          if (dialx >= 215 && dialy > 550) {
+            dialy = dialy - 0.6;
+          }
       }
       
-      else {
-        y2 = y2 + 0.05;
-      }
-      
-      if (y2 > ylength) {
+      if (count == 1) {
+        y2 = y2 + 0.075;
+        
+        if (y2 > ylength) {
           y2 = ylength;
           move = 1;
         }
+        
+        if (dialx < 380) {
+            dialx = dialx + 0.25;
+          }
+          
+          if (dialy <= 550) {
+             dialy = dialy + 8;
+          }
+          
+          if (dialx >= 215 && dialy > 550) {
+            dialy = dialy - 0.3;
+          }
+      }
+       
     }
     
     else {
@@ -103,6 +146,12 @@ class Fuel {
     }
   }
   
+  void release() {
+    dialx = 215;
+    dialy = 628;
+    release = 0;
+  }
+  
   void bar() {
     if (move != 1) {
       fill(0);
@@ -111,7 +160,7 @@ class Fuel {
   }
   
   void count() {
-    count = 4;
+    count = 1;
   }
   
   void count2() {
