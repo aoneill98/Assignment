@@ -1,3 +1,9 @@
+/* Aron O'Neill
+C16466214
+DT228/2
+OOP
+*/
+
 import ddf.minim.*;
 
 Minim minim;

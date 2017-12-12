@@ -64,6 +64,10 @@ class Speedo {
   }
   
   void move() {
+    x1 = width - width/7;
+    y1 = height/27;
+    x2 = 0;
+    ylength = height/16;
     move = 1;
   }
  }
