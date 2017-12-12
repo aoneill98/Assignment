@@ -1,10 +1,19 @@
+import ddf.minim.*;
+
+Minim minim;
+AudioPlayer noise1;
+
 Star[] stars = new Star[800];
 float speed;
 Speedo speedMeter;
 Fuel FuelBar;
 int count = 0;
 
+
+
 void setup() {
+  minim = new Minim(this);
+  noise1 = minim.loadFile("ufo.wav");
   size(960, 636);
   radar1 = new Radar(width - width / 13, height - height / 10, 40, 0.5, color(0, 255, 0));
   stroke(255);
@@ -30,6 +39,7 @@ void keyPressed() {
   switch(key)
   {
     case 'w':
+    noise1.play();
     FuelBar.sets1();
     speedMeter.count2();
     speedMeter.speedSetup();
@@ -71,6 +81,8 @@ void keyReleased() {
   switch(key)
   {
     case 'w':
+    noise1.close();
+    noise1 = minim.loadFile("ufo.wav");
     FuelBar.sets();
     FuelBar.release();
     speedMeter.move();
