@@ -10,5 +10,5 @@ Firstly I established what my basic background was going to be. I eventually dec
 YouTube video:
 
 <a href="https://www.youtube.com/watch?v=bf91SQFgTIQ
-" target="_blank" ><img src="" 
+" target="_blank" ><img src="https://www.youtube.com/embed/bf91SQFgTIQ" 
 alt="CLICK  HERE TO VIEW YOUTUBE VIDEO" width="240" height="180" border="10" /></a>
