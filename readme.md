@@ -9,5 +9,5 @@ Firstly I established what my basic background was going to be. I eventually dec
 
 YouTube video:
 
-<a href="https://www.youtube.com/watch?v=bf91SQFgTIQ" target="_blank"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+<a href="https://www.youtube.com/watch?v=bf91SQFgTIQ" target="_blank"> 
+alt="Click here to view video" width="240" height="180" border="10" /></a>
